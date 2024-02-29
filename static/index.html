@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Valley Metro Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container" style="margin: 0">
+      <div class="row">
+        <div class="col-2" id="infobox">
+          <div id="">
+            <h1>Valley Metro Transit Tracker</h1>
+            <hr />
+            <div id="info2">
+              <p>Click on a bus to see it's route and next stop.<br /></p>
+              <p>Click on a stop to see the next buses arriving.</p>
+            </div>
+            <hr />
+            <div id="view_checkboxes">
+              <h2>View</h2>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flex_busses"
+                  checked
+                  onchange="refreshView();" />
+
+                <label class="form-check-label" for="flex_busses">
+                  Buses
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flex_lightrail"
+                  checked
+                  onchange="refreshView();" />
+                <label class="form-check-label" for="flex_lightrail">
+                  Light Rail Cars
+                </label>
+              </div>
+            </div>
+            <!-- <hr />
+            <h2>Service Alerts</h2>
+            <div id="alerts">
+              <p>Checking for service alerts...</p>
+            </div> -->
+          </div>
+        </div>
+        <div id="map" class="col-10"></div>
+      </div>
+    </div>
+
+    <script src="./js/BusPositions.js"></script>
+    <script src="./js/ServiceAlerts.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
